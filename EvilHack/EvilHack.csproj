@@ -278,6 +278,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Questions\QuestionAndAnswersPartialView.cshtml" />
+    <Content Include="Views\Questions\Index.cshtml" />
     <Content Include="Views\Home\TakeQuiz.cshtml" />
   </ItemGroup>
   <ItemGroup>
