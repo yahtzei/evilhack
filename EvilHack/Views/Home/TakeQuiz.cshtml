@@ -1,0 +1,38 @@
+﻿@model List<EvilHack.Models.Question>
+@using EvilHack.Models;
+@using EvilHack.Classes;
+
+@{
+    ViewBag.Title = "TakeQuiz";
+}
+
+<h2>TakeQuiz</h2>
+
+<div>
+    @{
+        for (int i = 0; i < Model.Count; i++)
+        {
+            var questionNumber = (i + 1).ToString();
+
+            var answersInRandomOrder = new List<string>
+            {
+                Model[i].CorrectAnswer,
+                Model[i].IncorrectAnswer1,
+                Model[i].IncorrectAnswer2,
+                Model[i].IncorrectAnswer3
+            };
+
+            answersInRandomOrder.Shuffle(); 
+
+            <div>
+                Question @questionNumber: @Model[i].QuestionText
+            </div>
+            <div>
+                @answersInRandomOrder[0] <br/>
+                @answersInRandomOrder[1] <br />
+                @answersInRandomOrder[2] <br />
+                @answersInRandomOrder[3]
+            </div>
+        }
+    }
+</div>
