@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EvilHack.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -25,6 +26,15 @@ namespace EvilHack.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult TakeQuiz()
+        {
+            ViewBag.Message = "Here's a quiz.";
+
+            var quiz = Db.Get();
+
+            return View(quiz);
         }
     }
 }
