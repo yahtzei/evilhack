@@ -1,45 +1,57 @@
 ﻿using EvilHack.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace EvilHack.Classes
 {
     public class Db
     {
+        public static List<Question> Questions { get; set; }
+
         public static List<Question> Get()
         {
-            var q1 = new Question
+            if (Db.Questions == null || Db.Questions.Count == 0)
             {
-                QuestionText = "Is Jan evil?",
-                CorrectAnswer = "Yes",
-                IncorrectAnswer1 = "No",
-                IncorrectAnswer2 = "Maybe",
-                IncorrectAnswer3 = "I don't know."
-            };
+                Db.Save(new Question
+                {
+                    QuestionText = "What is the first question",
+                    CorrectAnswer = "The correct answer",
+                    IncorrectAnswer1 = "An incorrect answer",
+                    IncorrectAnswer2 = "Another incorrect answer",
+                    IncorrectAnswer3 = "Some other incorrect answer"
+                });
 
-            var q2 = new Question
+                Db.Save(new Question
+                {
+                    QuestionText = "What is the second question",
+                    CorrectAnswer = "The correct answer",
+                    IncorrectAnswer1 = "An incorrect answer",
+                    IncorrectAnswer2 = "Another incorrect answer",
+                    IncorrectAnswer3 = "Some other incorrect answer"
+                });
+
+                Db.Save(new Question
+                {
+                    QuestionText = "What is the third question",
+                    CorrectAnswer = "The correct answer",
+                    IncorrectAnswer1 = "An incorrect answer",
+                    IncorrectAnswer2 = "Another incorrect answer",
+                    IncorrectAnswer3 = "Some other incorrect answer"
+                });
+            }
+
+            return Questions;
+        }
+
+        public static void Save(Question question)
+        {
+            if (Db.Questions == null)
             {
-                QuestionText = "Is Nick evil?",
-                CorrectAnswer = "No",
-                IncorrectAnswer1 = "Yes",
-                IncorrectAnswer2 = "Maybe",
-                IncorrectAnswer3 = "I don't know."
-            };
+                Db.Questions = new List<Question>();
+            }
 
-            var q3 = new Question
-            {
-                QuestionText = "Is question 3 evil?",
-                CorrectAnswer = "Erm",
-                IncorrectAnswer1 = "What?",
-                IncorrectAnswer2 = "Eh?",
-                IncorrectAnswer3 = "Huh?"
-            };
-
-            var questions = new List<Question> { q1, q2, q3 };
-
-            return questions;
+            Db.Questions.Add(question);
         }
     }
+
+
 }
