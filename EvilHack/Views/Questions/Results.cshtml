@@ -1,11 +1,9 @@
-﻿@model List<EvilHack.Models.Question>
+﻿@model EvilHack.Models.Quiz
 @{
     ViewBag.Title = "Results";
 }
 
-@foreach (var item in Model)
+@foreach (var item in Model.Questions)
 {
-    <p>item.Hint</p>
+    <p>@item.Hint</p>
 }
-
-

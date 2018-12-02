@@ -22,7 +22,7 @@ namespace EvilHack.Controllers
         public ActionResult Results(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
-            var quiz = Db.Get();
+            var quiz = Db.GetQuiz();
             return View(quiz);
         }
     }
