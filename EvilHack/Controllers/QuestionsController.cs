@@ -17,13 +17,5 @@ namespace EvilHack.Controllers
             var quiz = Db.Get();
             return View(quiz);
         }
-
-        // GET: Questions
-        [AllowAnonymous]
-        public ActionResult Index(string returnUrl)
-        {
-            ViewBag.ReturnUrl = returnUrl;
-            return View();
-        }
     }
 }
