@@ -12,5 +12,6 @@ namespace EvilHack.Models
         public string IncorrectAnswer1 { get; set; }
         public string IncorrectAnswer2 { get; set; }
         public string IncorrectAnswer3 { get; set; }
+        public string Hint { get; set; }
     }
 }
