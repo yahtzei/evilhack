@@ -23,6 +23,17 @@ textarea {
     max-width: 280px;
 }*/
 
+.img-logo {
+    max-height: 300px;
+    max-width: 300px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.blue-container p,h1,h2,h3,h4 {
+    color: #ffffff;
+}
+
 .spacer {
     margin: 5px;
 }

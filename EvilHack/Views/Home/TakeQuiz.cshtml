@@ -13,8 +13,7 @@
 
 </script>
 
-<img src="~/Assets/Images/logo.png" class="img-thumbnail"/>
-<h2>Take The Quiz</h2>
+<img src="~/Assets/Images/logo.png" class="img-responsive img-logo"/>
 
 <div class="container">
     @{
@@ -31,7 +30,7 @@
 
             answersInRandomOrder.Shuffle();
 
-            <div class="panel panel-default">
+            <div class="panel panel-primary">
                 <div class="panel panel-heading">
                     <span>
                         Question @questionNumber: @Model.Questions[i].QuestionText
@@ -39,12 +38,12 @@
                 </div>
                 <div class="panel panel-body">
                     <div class="row">
-                        <button class="btn btn-default col-md-5 spacer">@answersInRandomOrder[0]</button>
-                        <button class="btn btn-default col-md-5 spacer">@answersInRandomOrder[1]</button>
+                        <button class="btn btn-primary col-md-5 spacer">@answersInRandomOrder[0]</button>
+                        <button class="btn btn-primary col-md-5 spacer">@answersInRandomOrder[1]</button>
                     </div>
                     <div class="row">
-                        <button class="btn btn-default col-md-5 spacer">@answersInRandomOrder[2]</button>
-                        <button class="btn btn-default col-md-5 spacer">@answersInRandomOrder[3]</button>
+                        <button class="btn btn-primary col-md-5 spacer">@answersInRandomOrder[2]</button>
+                        <button class="btn btn-primary col-md-5 spacer">@answersInRandomOrder[3]</button>
                     </div>
                 </div>
             </div>
