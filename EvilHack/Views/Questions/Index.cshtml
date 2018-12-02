@@ -1,4 +1,4 @@
-﻿@model List<EvilHack.Models.Question>
+﻿@model EvilHack.Models.Quiz
 
 @{
     ViewBag.Title = "Index";
@@ -16,7 +16,7 @@
     </div>
     <div class="col-sm-8">
         <form method="post">
-            @foreach (var item in Model)
+            @foreach (var item in Model.Questions)
             {
                 @Html.Partial("~/Views/Questions/QuestionAndAnswersPartialView.cshtml", item)
             }

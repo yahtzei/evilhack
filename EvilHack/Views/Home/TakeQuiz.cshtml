@@ -17,15 +17,15 @@
 
 <div class="container">
     @{
-        for (int i = 0; i < Model.Count; i++)
+        for (int i = 0; i < Model.Questions.Count; i++)
         {
             var questionNumber = (i + 1).ToString();
             var answersInRandomOrder = new List<string>
             {
-                Model[i].CorrectAnswer,
-                Model[i].IncorrectAnswer1,
-                Model[i].IncorrectAnswer2,
-                Model[i].IncorrectAnswer3
+                Model.Questions[i].CorrectAnswer,
+                Model.Questions[i].IncorrectAnswer1,
+                Model.Questions[i].IncorrectAnswer2,
+                Model.Questions[i].IncorrectAnswer3
             };
 
             answersInRandomOrder.Shuffle();
@@ -33,7 +33,7 @@
             <div class="panel panel-default">
                 <div class="panel panel-heading">
                     <span>
-                        Question @questionNumber: @Model[i].QuestionText
+                        Question @questionNumber: @Model.Questions[i].QuestionText
                     </span>
                 </div>
                 <div class="panel panel-body">

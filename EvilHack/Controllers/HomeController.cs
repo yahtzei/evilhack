@@ -32,7 +32,7 @@ namespace EvilHack.Controllers
         {
             ViewBag.Message = "Here's a quiz.";
 
-            var quiz = Db.Get();
+            var quiz = Db.GetQuiz();
 
             return View(quiz);
         }

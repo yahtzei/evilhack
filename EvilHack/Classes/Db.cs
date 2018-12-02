@@ -1,5 +1,6 @@
 ﻿using EvilHack.Models;
 using System.Collections.Generic;
+using Microsoft.Ajax.Utilities;
 
 namespace EvilHack.Classes
 {
@@ -7,7 +8,9 @@ namespace EvilHack.Classes
     {
         public static List<Question> Questions { get; set; }
 
-        public static List<Question> Get()
+        public static Quiz Quiz { get; set; }
+
+        public static Quiz GetQuiz()
         {
             if (Db.Questions == null || Db.Questions.Count == 0)
             {
@@ -39,7 +42,12 @@ namespace EvilHack.Classes
                 });
             }
 
-            return Questions;
+            if (Db.Quiz == null)
+            {
+                Db.Quiz = new Quiz(Db.Questions);
+            }
+
+            return Db.Quiz;
         }
 
         public static void Save(Question question)

@@ -14,7 +14,7 @@ namespace EvilHack.Controllers
         public ActionResult Index(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
-            var quiz = Db.Get();
+            var quiz = Db.GetQuiz();
             return View(quiz);
         }
     }
