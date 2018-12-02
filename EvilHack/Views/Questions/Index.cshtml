@@ -1,6 +1,36 @@
-﻿
-@{
-    ViewBag.Title = "Edit";
-}
+﻿@model List<EvilHack.Models.Question>
 
-@Html.Partial("~/Views/Questions/QuestionAndAnswersPartialView.cshtml")
+@{
+    ViewBag.Title = "Index";
+}
+<h1>Grid</h1>
+<p>This example demonstrates a 50%/50% split on small, medium and large devices. On extra small devices, it will stack (100% width).</p>
+<p>Resize the browser window to see the effect.</p>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">
+                Quiz 1
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">Quiz 2</a>
+            <a href="#" class="list-group-item list-group-item-action">Quiz 3</a>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <form method="post">
+            @foreach (var item in Model)
+            {
+                @Html.Partial("~/Views/Questions/QuestionAndAnswersPartialView.cshtml", item)
+            }
+            @*Generate empty form at the end*@
+            @Html.Partial("~/Views/Questions/EmptyQAPartialView.cshtml")
+            <div class="form-group">
+                <div>
+                    <button class="btn btn-primary" name="submit" type="submit">
+                        Save
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
