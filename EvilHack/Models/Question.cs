@@ -19,8 +19,8 @@ namespace EvilHack.Models
         public bool IncorrectChoice2 { get; set; }
 
         public string IncorrectAnswer3 { get; set; }
-        public string Hint { get; set; }
-
         public bool IncorrectChoice3 { get; set; }
+
+        public string Hint { get; set; }
     }
 }

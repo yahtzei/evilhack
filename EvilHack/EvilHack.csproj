@@ -298,6 +298,7 @@
     <Content Include="Views\Questions\Index.cshtml" />
     <Content Include="Views\Home\TakeQuiz.cshtml" />
     <Content Include="Views\Questions\EmptyQAPartialView.cshtml" />
+    <Content Include="Views\Questions\Results.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
