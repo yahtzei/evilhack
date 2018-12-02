@@ -1,101 +1,109 @@
 ﻿@model EvilHack.Models.Question
-
-<div class="form-group ">
-    <label class="control-label " for="text">
-        Question
-    </label>
-    <div class="input-group">
-        <div class="input-group-addon">
-            <i class="fa fa-question">
-            </i>
+<div class="form-horizontal">
+    <div class="panel panel-default">
+        <div class="panel panel-heading" id="panel-heading-no-margin">
+             <h3 class="panel-title">New Question...</h3>
         </div>
-        <input class="form-control" id="text" name="text" type="text" value="@Model.QuestionText" />
-    </div>
-    <span class="help-block" id="hint_text">
-        Enter your question.
-    </span>
-</div>
-<div class="form-group">
-    <label class="control-label " for="answer1">
-        Answer 1
-    </label>
-    <div class="input-group">
-        <div class="input-group-addon">
-            <i class="fa fa-commenting-o">
-            </i>
+        <div class="panel-body">
+            <div class="panel-padding">
+                <div class="form-group">
+                    <label class="control-label " for="text">
+                        Question
+                    </label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-question">
+                            </i>
+                        </div>
+                        <input class="form-control" id="text" name="text" type="text" value="@Model.QuestionText"/>
+                    </div>
+                    <span class="help-block" id="hint_text">
+                        Enter your question.
+                    </span>
+                </div>
+                <div class="form-group">
+                    <label class="control-label " for="answer1">
+                        Answer 1
+                    </label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-commenting-o">
+                            </i>
+                        </div>
+                        <input class="form-control" id="answer1" name="answer1" type="text" value="@Model.IncorrectAnswer1"/>
+                    </div>
+                    <span class="help-block" id="hint_answer1">
+                        Enter the answer.
+                    </span>
+                </div>
+                <div class="form-group ">
+                    <label class="control-label " for="answer2">
+                        Answer 2
+                    </label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-commenting-o">
+                            </i>
+                        </div>
+                        <input class="form-control" id="answer2" name="answer2" type="text" value="@Model.IncorrectAnswer2"/>
+                    </div>
+                    <span class="help-block" id="hint_answer2">
+                        Enter the answer.
+                    </span>
+                </div>
+                <div class="form-group ">
+                    <label class="control-label " for="answer3">
+                        Answer 3
+                    </label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-commenting-o">
+                            </i>
+                        </div>
+                        <input class="form-control" id="answer3" name="answer3" type="text" value="@Model.CorrectAnswer"/>
+                    </div>
+                    <span class="help-block" id="hint_answer3">
+                        Enter the answer.
+                    </span>
+                </div>
+                <div class="form-group form">
+                    <label class="control-label" for="answer4">
+                        Answer 4
+                    </label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-commenting-o">
+                            </i>
+                        </div>
+                        <input class="form-control" id="answer4" name="answer4" type="text" value="@Model.IncorrectAnswer3"/>
+                    </div>
+                    <span class="help-block" id="hint_answer4">
+                        Enter the answer.
+                    </span>
+                </div>
+                <div class="form-group ">
+                    <label class="control-label" for="correct-answer">
+                        Correct answer
+                    </label>
+                    <select class="select form-control" id="correct-answer" name="correct-answer">
+                        <option value="Answer 1">
+                            Answer 1
+                        </option>
+                        <option value="Answer 2">
+                            Answer 2
+                        </option>
+                        <option value="Answer 3">
+                            Answer 3
+                        </option>
+                        <option value="Answer 4">
+                            Answer 4
+                        </option>
+                    </select>
+                    <span class="help-block" id="hint_correct-answer">
+                        Select the correct answer.
+                    </span>
+                </div>
+            </div>
         </div>
-        <input class="form-control" id="answer1" name="answer1" type="text" value="@Model.IncorrectAnswer1" />
-    </div>
-    <span class="help-block" id="hint_answer1">
-        Enter the answer.
-    </span>
-</div>
-<div class="form-group ">
-    <label class="control-label " for="answer2">
-        Answer 2
-    </label>
-    <div class="input-group">
-        <div class="input-group-addon">
-            <i class="fa fa-commenting-o">
-            </i>
         </div>
-        <input class="form-control" id="answer2" name="answer2" type="text" value="@Model.IncorrectAnswer2" />
-    </div>
-    <span class="help-block" id="hint_answer2">
-        Enter the answer.
-    </span>
 </div>
-<div class="form-group ">
-    <label class="control-label " for="answer3">
-        Answer 3
-    </label>
-    <div class="input-group">
-        <div class="input-group-addon">
-            <i class="fa fa-commenting-o">
-            </i>
-        </div>
-        <input class="form-control" id="answer3" name="answer3" type="text" value="@Model.CorrectAnswer" />
-    </div>
-    <span class="help-block" id="hint_answer3">
-        Enter the answer.
-    </span>
-</div>
-<div class="form-group form">
-    <label class="control-label" for="answer4">
-        Answer 4
-    </label>
-    <div class="input-group">
-        <div class="input-group-addon">
-            <i class="fa fa-commenting-o">
-            </i>
-        </div>
-        <input class="form-control" id="answer4" name="answer4" type="text" value="@Model.IncorrectAnswer3" />
-    </div>
-    <span class="help-block" id="hint_answer4">
-        Enter the answer.
-    </span>
-</div>
-<div class="form-group ">
-    <label class="control-label" for="correct-answer">
-        Correct answer
-    </label>
-    <select class="select form-control" id="correct-answer" name="correct-answer">
-        <option value="Answer 1">
-            Answer 1
-        </option>
-        <option value="Answer 2">
-            Answer 2
-        </option>
-        <option value="Answer 3">
-            Answer 3
-        </option>
-        <option value="Answer 4">
-            Answer 4
-        </option>
-    </select>
-    <span class="help-block" id="hint_correct-answer">
-        Select the correct answer.
-    </span>
-</div>
-<hr />
-

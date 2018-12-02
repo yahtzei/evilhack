@@ -26,3 +26,13 @@ textarea {
 .spacer {
     margin: 5px;
 }
+
+div.panel-padding {
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#panel-heading-no-margin {
+    margin-bottom: 0;
+}
