@@ -27,7 +27,7 @@ namespace EvilHack.Classes
                 Db.Save(new Question
                 {
                     QuestionText = "Which of these passwords would you most likely pick as your passsword?",
-                    CorrectAnswer = "P3ngu1ns!",
+                    CorrectAnswer = "!pa33w0rd",
                     IncorrectAnswer1 = "DogDogDog",
                     IncorrectAnswer2 = "Password1",
                     IncorrectAnswer3 = "MyFirstAddress01",
