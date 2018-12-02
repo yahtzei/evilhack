@@ -13,7 +13,7 @@ namespace EvilHack.Classes
             {
                 Db.Save(new Question
                 {
-                    QuestionText = "Who is mostlikely to be a target of a cyber crime?",
+                    QuestionText = "Who is most likely to be a target of a cyber crime?",
                     CorrectAnswer = "Everyone",
                     IncorrectAnswer1 = "Adults",
                     IncorrectAnswer2 = "Elderly",
