@@ -30,7 +30,8 @@
 
             answersInRandomOrder.Shuffle();
 
-            <div class="panel panel-primary">
+            <br/>
+            <div class="panel panel-success">
                 <div class="panel panel-heading">
                     <span>
                         Question @questionNumber: @Model.Questions[i].QuestionText
@@ -38,12 +39,12 @@
                 </div>
                 <div class="panel panel-body">
                     <div class="row justify-content-center">
-                        <button class="btn btn-primary col-md-6 ">@answersInRandomOrder[0]</button>
-                        <button class="btn btn-primary col-md-6 ">@answersInRandomOrder[1]</button>
-                    </div>
+                        <button class="btn btn-default col-md-6 ">@answersInRandomOrder[0]</button>
+                        <button class="btn btn-default col-md-6 ">@answersInRandomOrder[1]</button>
+                    </div><br/>
                     <div class="row justify-content-center">
-                        <button class="btn btn-primary col-md-6">@answersInRandomOrder[2]</button>
-                        <button class="btn btn-primary col-md-6">@answersInRandomOrder[3]</button>
+                        <button class="btn btn-default col-md-6">@answersInRandomOrder[2]</button>
+                        <button class="btn btn-default col-md-6">@answersInRandomOrder[3]</button>
                     </div>
                 </div>
             </div>
